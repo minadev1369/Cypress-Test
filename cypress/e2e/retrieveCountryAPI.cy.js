@@ -11,7 +11,7 @@ export class RetrieveCountryFromAPI {
         .invoke("text")
         .then((href) => {
           cy.request("GET", href).then((api) => {
-            countryList = api.body.slice(0, 3);
+            countryList = api.body.slice(0, 10);
             this.OnResult(countryList);
           });
         });
